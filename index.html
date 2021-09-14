@@ -50,12 +50,17 @@
     }
 
     div[name="options-wrapper"] {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(auto, 20em));
+      grid-gap: 2%;    }
+    div[name="options-wrapper"] label {
       display: flex;
-      flex-wrap: wrap-reverse;
+      max-width: 100%;
     }
 
     #sentence-input {
-      width: 20em;
+      flex-grow: 1;
+      max-width: 100%;
       border: none;
       border-bottom: 1px solid rgba(0 0 0 / 0.25);
       background: transparent;
@@ -168,13 +173,13 @@
   <section id="sentence-editor">
     <h3>preview options</h3>
     <div name="options-wrapper">
-      <label for="sentence-input">sentence: 
+      <label for="sentence-input">
+        <span>sentence:&nbsp;</span>
         <input id="sentence-input" value="The quick brown fox jumps over the lazy dog">
       </label>
 
-      <div class="flex-spacer"></div>
-
-      <label for="font-size-slider">font size:
+      <label for="font-size-slider">
+        <span>font size:&nbsp;</span>
         <input type="range" id="font-size-slider" min="6" max="75">
       </label>
     </div>
