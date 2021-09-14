@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+<head>
+	<title>fantasque-sans</title>
+
+	<!-- so meta (metags.io) -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="https://shitchell.github.io/fantasque/Webfonts/FantasqueSansMono-Regular-decl.css" />
+	<link rel="stylesheet" href="https://shitchell.github.io/fantasque/Webfonts/FantasqueSansMono-Bold-decl.css" />
+	<link rel="stylesheet" href="https://shitchell.github.io/fantasque/Webfonts/FantasqueSansMono-Italic-decl.css" />
+	<link rel="stylesheet" href="https://shitchell.github.io/fantasque/Webfonts/FantasqueSansMono-BoldItalic-decl.css" />
+
+	<style>
+		body {
+			font-family: "Josefin Sans", "Ubuntu", "Roboto", sans;
+			font-size: 1.4em;
+			line-height: 1.2em;
+			margin: 0;
+			width: 100%;
+			box-sizing: border-box;
+			background: #efefef;
+		}
+
+		header {
+		  width: 100%;
+			display: flex;
+			justify-content: space-between;
+		  background: rgba(200, 200, 255);
+		  padding: 0.5em;
+		  box-sizing: border-box;
+		}
+		header .name {
+		  font-weight: bold;
+		}
+		header .credit {
+		  font-style: italic;
+		}
+		
+		#intro {
+		  margin: 0;
+		  padding: 0.5em;
+		}
+
+		#sentence-input {
+		  width: 80%;
+		  border: none;
+		  border-bottom: 1px solid rgba(0 0 0 / 0.25);
+		  background: transparent;
+		  font-size: 1.2rem;
+		}
+		#sentence-input:focus {
+		  outline: none;
+		}
+
+    section {
+      padding: 0.5em;
+      margin: 0.4em;
+      background: rgba(0 200 200 / 0.1);
+      border-radius: 0.2em;
+    }
+    section:not(:first-child) {
+      margin-top: 1em;
+    }
+    section > h3:first-child {
+      position: relative;
+      top: -0.75em;
+      right: 0;
+      background: #efefef;
+      width: fit-content;
+      margin: 0;
+      padding: 0 0.5em;
+      margin-left: -0.5em;
+      border-radius: 0.2em;
+      font-style: normal;
+    }
+
+    section.preview .sentence {
+      margin-bottom: 0.5em;
+    }
+		section.preview .sentence,
+		section.preview .letters {
+		  font-family: "Fantasque Sans Mono";
+		}
+		section.preview h3 {
+		  font-weight: 600;
+		}
+		section.preview .letters {
+		  display: flex;
+		  flex-wrap: wrap;
+		}
+		section.preview .letters .letter {
+		  width: 1.5em;
+		  height: 1.5em;
+		  border: 1px solid rgba(0 0 0 / 0.1);
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  background: #fff;
+		}
+
+		code, pre.code {
+		  background: #333;
+		  color: #fff;
+		  border-radius: 0.2em;
+		}
+		code {
+		  padding: 0 0.2em;
+		}
+		pre.code {
+		  font-size: 1.1rem;
+		  line-height: 1.2rem;
+		  overflow: auto;
+		  padding: 0.5em;
+		  white-space: pre-line;
+		}
+
+		ol {
+		  margin: 0;
+		  padding: 0 1em;
+		}
+
+		.bold {
+		  font-weight: 700;
+		}
+		.regular {
+		  font-weight: 400;
+		}
+		.italic {
+		  font-style: italic;
+		}
+	</style>
+</head>
+<body>
+
+  <header>
+    <span class="title"><span class="name">fantasque-sans</span> <span class="credit">by <a href="https://github.com/belluzj">belluzj</a></span></span>
+    <a href="https://github.com/belluzj/fantasque-sans" target="_blank">github</a>
+  </header>
+
+  <p id="intro">
+    this is a preview of the fantastic Fantasque Sans Mono font by Jany Belluz. this repo has GitHub Pages enabled, thus allowing you to <a href="#howto">use the font</a> on any webpage 🙂
+  </p>
+
+  <section id="sentence-editor">
+    <h3>preview sentence</h3>
+    <input id="sentence-input" value="The quick brown fox jumps over the lazy dog">
+  </section>
+
+  <section id="regular" class="preview">
+    <h3>regular</h3>
+    <div class="sentence"></div>
+    <div class="letters"></div>
+  </section>
+
+  <section id="bold" class="preview bold">
+    <h3>bold</h3>
+    <div class="sentence"></div>
+    <div class="letters"></div>
+  </section>
+
+  <section id="italic" class="preview italic">
+    <h3>italic</h3>
+    <div class="sentence"></div>
+    <div class="letters"></div>
+  </section>
+
+  <section id="bold-italic" class="preview bold italic">
+  <h3>bold italic</h3>
+    <div class="sentence"></div>
+    <div class="letters"></div>
+  </section>
+
+  <section id="howto">
+    <h3>how to use</h3>
+    <ol>
+      <li>
+        Add the following code to your <code>&lt;head></code>
+        <pre class="code">
+&lt;link rel="stylesheet" href="https://shitchell.github.io/fantasque/Webfonts/FantasqueSansMono-Regular-decl.css" />
+&lt;link rel="stylesheet" href="https://shitchell.github.io/fantasque/Webfonts/FantasqueSansMono-Bold-decl.css" />
+&lt;link rel="stylesheet" href="https://shitchell.github.io/fantasque/Webfonts/FantasqueSansMono-Italic-decl.css" />
+&lt;link rel="stylesheet" href="https://shitchell.github.io/fantasque/Webfonts/FantasqueSansMono-BoldItalic-decl.css" />
+        </pre>
+      </li>
+      <li>
+        Use the following rule in your css:
+        <pre class="code">
+font-family: "Fantasque Sans Mono", monospace;
+        </pre>
+      </li>
+    </ol>
+  </section>
+
+  <section id="download">
+    <h3>download</h3>
+    <ol>
+      <li>go to the <a href="https://github.com/belluzj/fantasque-sans/releases/latest" target="_blank">latest releases</a> from belluzj/fantasque-sans</li>
+      <li>???</li>
+      <li>profit</li>
+    </ol>
+  </section>
+
+  <script type="application/javascript">
+    previewCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&'()*+,-./:;<=>?@[\\]^_{|}~";
+    sentenceInput = document.getElementById("sentence-input");
+    sections = document.querySelectorAll("section.preview");
+
+    function updateLetters() {
+      for (section of sections) {
+        lettersWrapper = section.querySelector(".letters");
+        for (letter of previewCharacters) {
+          let span = document.createElement("span");
+          span.classList.add("letter");
+          span.innerText = letter;
+          lettersWrapper.append(span);
+        }
+      }
+    }
+
+    function updateSentences() {
+      for (section of sections) {
+        let sentence = section.querySelector(".sentence");
+        sentence.innerText = sentenceInput.value;
+      }
+    }
+
+    updateLetters();
+    updateSentences();
+
+    sentenceInput.onpaste = updateSentences;
+    sentenceInput.onkeyup = updateSentences;
+    sentenceInput.onchange = updateSentences;
+  </script>
+
+</body>
+</html>
